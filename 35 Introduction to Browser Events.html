@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="container"
+      onmouseenter="console.log('mouse enter in container')"
+      onclick="console.log('mouse click in contaier')"
+    >
+      <button onclick="alert('hello')">click me</button>
+    </div>
+  </body>
+</html>
+<script>
+  let a = document.getElementsByClassName("container")[0];
+  a.onclick = () => {
+    a.innerHTML = "hello world";
+  };
+
+  //  ----- Browser Events -----
+
+  //  An event is a signal that something has happed. All the DOM nodes generate such signals.
+  //  Some important DOM events are :
+
+  //  Mouse events: click, contextmenu (right click) mouseover / mouseout, mousedown / mouseup, mousemove
+
+  //  Keyboard events: keydown and keyup
+
+  //  form element events: submit, focus etc.
+  //  Document events: DOMContentLoaded
+
+  //  --- Handling Events ---
+
+  //  Events can be handled through HTML attributes
+
+  //  <input value="Hey" onclick="alert("hey")" type="button">
+  //                                     ↓
+  //                         Can be another JS function
+
+  //  Events can also be handled through the onclick property
+  //  element.onclick function () { "alert ("yes") };
+
+  //  Note: Adding a handler with JavaScript overwrites the existing handler.
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //  We all make mistakes. Also sometimes our script can have errors Usually a program halts when an ever occurs.
+
+  //  The try... catch syntax allows us to catch errors. so that the script instead of dying can do some thing more reasonable.
+
+  //  ========= The try... catch syntax ========
+  //  The try catch syntax has two main blocks: try and then catch
+  //  try {
+  //    try the code
+  //  }
+
+  //  ==> the error variable contains an earror object
+  //  catch (error)  {
+  //      error handling
+  //  }
+
+  //  It works like this.
+
+  //  1 ) first the code. in try is executed.
+
+  //  2) If there is is no error, catch is ignored else catch is execuated
+  //  try catch works synchronously
+  //  If an exception happens in scheduled code. like in setTimeout, then try... catch wont Catch it :
+
+  //  try {
+  //  setTimeout(() => {
+  //     // error code    ==> script dies and cstch wont work
+  //  }, 100);
+  //  }
+  //  catch...
+
+  //  thats because the function itself is executed later, when the engine has already left the try ... catch construct.
+
+  setTimeout(() => {
+    console.log("Hacking wifi... please wait...");
+  }, 1000);
+
+  try {
+    console.log(Rahul);
+  } catch (error) {
+    console.log(error);
+  }
+
+  setTimeout(() => {
+    console.log("Fetching username and password... please wait...");
+  }, 2000);
+
+  setTimeout(() => {
+    console.log("Hacking Rahul's facebook id... please wait...");
+  }, 3000);
+
+  setTimeout(() => {
+    console.log(
+      "username and password of Rahul (+91123456789) fetched... please wait..."
+    );
+  }, 4000);
+</script>

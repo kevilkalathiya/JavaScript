@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // ======== Async/await ==========
+  // there is a special syntax to work with promises in javascript.
+
+  // A function can be made async by using async keyword like this :
+
+  // async function harry() {
+  //   return 5;
+  // }
+
+  // An async Function always return a promiss, other values are Wrapped in a Promise Automatically.
+
+  // We can do Something like this
+
+  // harry().then(alert);
+
+  // so, async ensures that the function returns a promise and wraps non promises in it.
+
+  //======== The Await Keyword ========
+
+  // there is another keyword called Await that Works only inside async functions
+
+  // let value = Await Promise
+
+  // the Awit keyword makes javascript wait until the Promise settles and returns its value
+
+  // its just a more elegant syntax of getting the Promise result than Promise.then + its easier to read & write.
+
+  async function harry() {
+    let delhiweather = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("27 Deg");
+      }, 2000);
+    });
+
+    let bangaloreweather = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("21 Deg");
+      }, 5000);
+    });
+
+    // delhiweather.then(alert);
+    // bangaloreweather.then(alert);
+
+    console.log("Fetching delhi weather please wait");
+    let delhiw = await delhiweather;
+    console.log("Fetched delhi weather is : " + delhiw);
+    console.log("Fetching bangalore weather please wait");
+    let bangalorew = await bangaloreweather;
+    console.log("Fetched bangalore weather is : " + bangalorew);
+  }
+  const cherry = async () => {
+    console.log("Hey i am cherry and i am waiting");
+  };
+
+  const main1 = async () => {
+    console.log("Welcome to weather control room");
+    let a = await harry();
+    let b = await cherry();
+  };
+  main1();
+</script>

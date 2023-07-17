@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div class="first">first</div>
+      <div class="second">second</div>
+    </div>
+  </body>
+</html>
+<script>
+  //====== notes on dom collections =======
+
+  // they are read only
+
+  /* they are live Element.childNodes variable(referance) will automatically
+     update if childNodes of elements is chaanged.*/
+
+  // they are iterable using for of loop
+
+  // $0 -> use to in the consol to refer to current elements.
+  // $1 -> use to in the consol to refer to previous elements.
+
+  // $0.style.background="pink"
+
+  // ======== siblings and the parents ========
+
+  // siblings are nodes that are children of the same parent.
+
+  // for example : <head> and <body> are siblings. siblings have same parent in the above example its html.
+
+  /* <body> is said to be the "next" or "right" sibling of <head>, <head> is said to be 
+       the "previous" or "left" siblings of <body>.*/
+
+  /* the next siblings is in nextSibling porperty, and the previous one in previousSibling.
+     the parent is available as "parentNode". */
+
+  console.log(document.documentElement.parentNode); // document
+  console.log(document.documentElement.parentElement); // null
+
+  console.log("document.body.firstChild is : ", document.body.firstChild); //text
+  a = document.body.firstChild;
+  console.log("a.nextSibling is : ", a.nextSibling); // div
+  console.log("a.parentNode is : ", a.parentNode); // body
+  console.log("a.parentElement is : ", a.parentElement); //body
+  console.log("a.firstChild.nextSibling is : ", a.firstChild.nextSibling); //error
+</script>

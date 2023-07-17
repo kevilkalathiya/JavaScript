@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // ==== Getters and Setters ====
+
+  // Classes may include getters and setters to get & Set the computed properties.
+
+  // First the name property is changed to _name to avoid the name Collision with the getter & setter.
+  // Then the getter uses the get keyword as shown above.
+
+  // ==== instanceof Operator ====
+
+  // The instanceof operator allows to check whether an object belongs to a certain class.
+
+  // The syntax is:
+  // <Obj> instanceof <class>
+
+  // It returns true if obj belongs to the Class or any other class inheriting from it
+
+  class Animal {
+    constructor(name) {
+      this._name = name;
+    }
+
+    fly() {
+      alert("fly is called");
+    }
+
+    get name() {
+      console.log("enter in get");
+      return this._name;
+    }
+
+    set name(newName) {
+      this._name = newName;
+    }
+  }
+
+  class Rabbit extends Animal {
+    eatCarrot() {
+      console.log("Eating carrot");
+    }
+  }
+
+  let a = new Rabbit("Bruno");
+  a.fly();
+  console.log(a.name);
+  a.name = "jack";
+  console.log(a.name);
+  let k = 24;
+
+  console.log(a instanceof Animal);
+  console.log(a instanceof Rabbit);
+  console.log(k instanceof Animal);
+</script>

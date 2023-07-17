@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body></body>
+</html>
+<script>
+  // console.log() : The log() method writes (logs) a message to the console. The log() method is useful for testing purposes.
+  console.log(console);
+
+  // console.error() : The console.error() method outputs an error message to the Web console.
+  console.error("Hey this is an error");
+
+  // console.assert() : The assert() method tests if a given expression is true or not. If the expression evaluates to 0, or false,
+  // an assertion failure is being caused, and the program is terminated.
+  console.assert(5 > 53);
+  console.assert(555 > 53);
+
+  console.clear(); // Console was cleared
+
+  // console.table() : The console.table() method displays tabular data as a table.
+  // This function takes one mandatory argument data, which must be an array or an object.
+  obj = { a: 1, b: 2, c: 3 };
+  console.table(obj);
+
+  // console.warn() : The warn() method writes a warning to the console. warning show in yellow color background in console.
+  console.warn("Hey please dont drink soda");
+
+  // console.info() : The console.info() method outputs an informational message to the Web console.
+  console.info("This in an important info");
+
+  // The console.time() method starts a timer you can use to track how long an operation takes. You give each timer a unique name, When you call
+  // console.timeEnd() with the same name,the browser will output the time, in milliseconds, that elapsed since the timer was started.
+  console.time("a");
+  console.timeEnd("a");
+
+  console.time("ForLoop");
+  for (let i = 1; i <= 10; i++) {
+    console.log("hello");
+  }
+  console.timeEnd("ForLoop");
+</script>

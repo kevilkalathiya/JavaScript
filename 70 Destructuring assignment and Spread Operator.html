@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // ==== Destructuring ====
+  // Destructuring assignment is used to unpack values from an array, or properties from objects,
+  // into distinct variables.
+
+  // let [x,y] = [ 7, 20]
+
+  // x will be assigned 7 and y, 20
+
+  // [10,x, ...rest] =[ 10, 80, 7, 11, 21, 88]
+
+  // x will be 80 rest will be [7, 11, 21,88]
+
+  // Similarly we can destructure objects оn the left hand side of the assignment
+
+  // const obj = {a:1, b:2}
+  // const {a,b} = obj;
+
+  // Some more examples can be found on MDN does.
+
+  // ==== Spread Syntax ====
+  // Spread syntax allows an iterable such as an array or string to be expanded in places where zero or
+  // more arguments are expected. In an object literal, the spread syntax enumerates the properties of an
+  // object and adds the key-value pairs to the object being created.
+
+  // Example:
+
+  // 1. const arr = [1, 7, 11]
+  //    const obj = { ...arr }; // { 0:1, 1:7, 2:11}
+
+  // 2. const nums = [1, 2, 7]
+  //    Console.log(Sum(... nums)) // 10
+
+  //    Other examples can be found on MDN docs
+
+  let arr = [3, 5, 8, 9, 12, 14];
+  // No need to do this:
+  //   let a = arr[0];
+  //   let b = arr[1];
+
+  //   let [a, b, c, d, ...rest] = arr;
+  //   console.log(a, b, c, d, rest);
+
+  //   let [a, , b, ...rest] = arr;
+  //   console.log(a, b, rest);
+
+  //   let { j, k } = { j: 1, k: 5 };
+  //   console.log(j, k);
+
+  //spread operator
+
+  let arr1 = [3, 5, 8];
+  //   let obj1 = { ...arr1 };
+  //   console.log(obj1);
+
+  //   function sum(v1, v2, v3) {
+  //     return v1 + v2 + v3;
+  //   }
+  //   console.log(sum(...arr1));
+
+  let obj2 = {
+    name: "Harry",
+    company: "Company XYZ",
+    address: "XYZ",
+  };
+
+  console.log({ ...obj2, name: "John", company: "ABC" });
+  console.log({ name: "John", company: "ABC", ...obj2 }); // This will print the obj2 object without changing any values.
+</script>

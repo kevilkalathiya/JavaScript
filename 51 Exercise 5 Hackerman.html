@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // Wriye a javascript program to pretend to loop like a hacker. write an async function.
+
+  let hakingsentence = [
+    "Initializing hack tool",
+    "connecting to Facebook",
+    "connecting to server 1",
+    "connection falied. retrying....",
+    "connecting to server 2",
+    "connected successfully",
+    "username i am harry",
+    "trying brute force",
+    "220k password tried...",
+    "match not found",
+    "another 200k password tried",
+    "match not found",
+    "another 200k password tried",
+    "match found",
+    "accessing Account",
+    "hack successful",
+  ];
+
+  const sleep = async (second) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(true);
+      }, second * 1000);
+    });
+  };
+
+  const Showhack = async (message) => {
+    await sleep(2);
+    document.write(message + "<br>");
+  };
+
+  (async () => {
+    for (let index = 0; index < hakingsentence.length; index++) {
+      await Showhack(hakingsentence[index]);
+    }
+  })();
+</script>

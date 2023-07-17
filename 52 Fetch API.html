@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // ==== Chapter 10 - Network Requests & Storing Data ====
+
+  // JavaScript can be used to send and retrieve information from the network when needed (AJAX)
+
+  // === Fetch API ===
+  // fetch is used to get data over the network.
+
+  //  let promise = fetch (url, [options])
+  //                                ↓
+  //                    without options, a get request is sent
+
+  // Getting a response is a 2-stage process
+
+  // 1. An object of Response class containing "status" & "ok" properties
+
+  // status - The http status code, eg. 200
+  // ok - boolean, true if the HTTP status code is 200-299
+
+  // 2. After that we need to call another method to access the body in different formats :
+
+  // response.text() → Read & return the text
+  // response.json() → parse the response as JSON
+  // other methods include response.formData(), response.blob(), response.arrayBuffer() etc.
+
+  // Note - We can use only one body - reading method. example if we have already got the response with
+  // response.text() then response.json() won't work.
+
+  // === Response headers ===
+  // The response headers are available in response.headers
+
+  // === Request headers ===
+  // To set a request header in fetch, we can use the headers option.
+
+  // let res = fetch(url, {
+  //   headers: {
+  //     Authentication: "Secret",
+  //   },
+  // });
+
+  let p = fetch("https://jsonplaceholder.typicode.com/posts");
+  p.then((response) => {
+    console.log(response.status);
+    console.log(response.ok);
+    console.log(response.headers);
+    return response.json();
+  }).then((value) => {
+    console.log(value);
+  });
+</script>

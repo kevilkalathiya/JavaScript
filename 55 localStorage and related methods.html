@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //  ==== localStorage ====
+  //  localStorage is a web storage object which are not sent to Server with each request This data survives a full page
+  //  refresh and even a full browser restart
+
+  //  ==> These are the methods provided by localStorage
+
+  //    1) SetItem (key, value) ==> Store key/value pair
+  //    2) getItem (key) ==> get the value by key
+  //    3) removeItem (key) ==> remove the key with its value.
+  //    4) clear() ==>  delete everything.
+  //    5) key(index) ==> get the key on a given position.
+  //    6) length ==> the number of stored items
+
+  //    We can get and set values like an object
+
+  //    LocalStorage.one = 1
+
+  //    alert (localStorage.one)
+  //    delete localstorage.One
+
+  //  ===== Important Note =====
+
+  //    1) Both key and Values must be strings
+  //    2) We can use the two JSON methods to store objects in localStorage:
+
+  //    JSON.Stringify(object) ==> Converts objects to json strings
+  //    JSON.parse(string) ==> converts string to objects (must be a valid JSON)
+
+  localStorage.setItem("name", "jenish");
+
+  let key = prompt("enter key you want to sent");
+  let value = prompt("enter value you want to sent");
+  localStorage.setItem(key, value);
+  console.log(`the value at ${key} is ${localStorage.getItem(key)}`);
+
+  if (key == "red" || key == "blue") {
+    localStorage.removeItem(key);
+  }
+
+  if (key == 0) {
+    localStorage.clear();
+  }
+
+  console.log(localStorage.length);
+  console.log(localStorage.key(0));
+</script>

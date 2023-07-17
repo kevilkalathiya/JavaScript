@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // ----- Introduction to Promises -----
+
+  // The solution to the callback hell is promises. A promise is a "promise of code execution".
+  // The Code either executes or fails, in both the cases the subscriber will be notified.
+
+  // The syntax of a Promise looks like this:
+
+  // let promise = new Promise (function (resolve, reject) {
+  //                                           ↓       ↓
+  //                                     predefined in JS engine
+  //     // executor
+  // });
+
+  // resolve and reject are two callbacks provided by javascript itself. They are called like this:
+
+  // resolve(value) -> If the job is finished successfully
+  // reject (error) -> If the job fails
+
+  // The promise object returned by the new Promise constructor has these properties.
+
+  // 1). State: Initially pending, then changes to either "fulfilled" when resolve is called or "rejected" When
+  //            reject is called.
+
+  // 2). result: Initially undefined, then changes to value if resolved (resolve(value)) or error when rejected
+  //             (reject(error))
+
+  let promise = new Promise(function (resolve, reject) {
+    console.log("hello");
+    resolve(56);
+  });
+  console.log("Hello one");
+  setTimeout(() => {
+    console.log("Hello Two");
+  }, 2000);
+  console.log("Hello Three");
+  console.log(promise);
+</script>

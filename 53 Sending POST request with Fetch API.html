@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // === POST requests ===
+  // To make a POST request, We need to use fetch options
+  // 1. method → HTTP - method, e.g. POST
+  // 2. body → the request body
+
+  // let response = await fetch ('/url', {
+  //                     method: 'POST',
+  //                     headers: {
+  //                         'Content Type' : "application/json"
+  //                     },
+  //                     body : '{"a":"harry"}'
+  //                 })
+
+  // let result = await response.json()
+
+  const createTodo = async (todo) => {
+    let option = {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(todo),
+    };
+
+    let p = await fetch("https://jsonplaceholder.typicode.com/posts", option);
+    let response = await p.json();
+    return response;
+  };
+
+  const getTodo = async (id) => {
+    let response = await fetch(
+      "https://jsonplaceholder.typicode.com/posts/" + id
+    );
+    let r = await response.json();
+    return r;
+  };
+
+  const mainfunc = async () => {
+    let todo = {
+      title: "harry",
+      body: "bhai",
+      userId: 1100,
+    };
+    let todor = await createTodo(todo);
+    console.log(todor);
+    console.log(await getTodo(5));
+  };
+
+  mainfunc();
+</script>

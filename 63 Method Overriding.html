@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // ==== Method Overriding ====
+  //  If we create our own implementation of run, it will not be taken from the Animal class.
+  //  This is called Method Overriding
+
+  // ==== Super keyword ====
+  //  When we override a method, we dont want the method of the previous class to go in Vain. We can execute
+  //  it using super keyword.
+
+  //  super (a, b) --> call parent constructor
+
+  class Employee {
+    login() {
+      console.log(`Employee has logged in`);
+    }
+
+    logout() {
+      console.log(`Employee has logged out`);
+    }
+
+    requestLeaves(leaves) {
+      console.log("Employee");
+      console.log(`Employee has requested ${leaves} leaves - Auto approved`);
+    }
+  }
+
+  class Programmer extends Employee {
+    requestCoffee(x) {
+      console.log(`Employee has requested ${x} Coffee`);
+    }
+    requestLeaves(leaves) {
+      console.log("Programmer");
+      super.requestLeaves(leaves);
+      console.log("One extra is granted");
+      //   console.log(`Employee has requested ${leaves + 1} leaves (one extra)`);
+    }
+  }
+
+  let e = new Programmer();
+  e.login();
+  e.requestLeaves(3);
+</script>

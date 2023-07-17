@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    // javascript is writen before the body tag so output sometime null.
+    console.log(document.body);
+  </script>
+  <body>
+    <!--This Code not genrate error and browser Auto currection div to span -->
+    <span>Hello World</div>
+     
+      <!-- we not create tBody tag inside table but Auto currection add inside table -->
+      <!-- <table>
+        <tr>
+          <td>kevil</td>
+        </tr>
+      </table> -->
+  </body>
+</html>
+<script>
+  // DOM tree refers to the HTMl page where all the nodes are object there can be three main types of nodes in the dom tree.
+  //   1) text Nodes
+  //   2) elements nodes
+  //   3) comment nodes
+
+  //   in an html page, <html> is at the root and <head> and <body> are its children,etc.
+
+  // ****** Auto currection ******
+  //   if an erroneous HTML is encountered by the browser, it tends to correct it. for example,
+  //   if we put something after the body ,it is automatically moved inside the body.
+  //   another example is <table> tag which is must contain <tbody>.
+
+  // ******  walking the dom ******
+
+  // *** document ***
+
+  //   note : below the code writing in console
+  //   document.body; => page body tag
+  //   document.head; => page head tag
+  //   document.documentElement; => page html tag
+  //   document.title; => page title
+
+  //   note : document-body can sometims be null if the javascript is writen before the body tag.
+</script>

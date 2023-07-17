@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //   ======  Session Storage ======
+
+  //   Used less often than localstorage. Properties and methods are Same as localstorage but:
+
+  //   1. The sessionStorage exists only within the current browser tab Another tab with same page will have
+  //      a different storage.
+
+  //   2. The data survives page refresh, but not closing/opening the tab.
+
+  //   ==== Storage Event ====
+  //   when the data gets updated in localStorage or SessionStorage, storage event triggers with these properties:
+
+  //   1) key => the key
+  //   2) old value => previous value
+  //   3) newvalue => new value
+  //   4) Url => page URL
+  //   5) storageArea => local or sessionStorage
+
+  //   we can listen the onstorage event of window which is triggered when updates are made to the same storage from other documents
+
+  sessionStorage.setItem("name", "kevil");
+
+  window.onstorage = (e) => {
+    alert("changed");
+    console.log(e);
+  };
+
+  //   in console
+  // localStorage.setItem("name","jenish")
+  // localStorage.setItem("name","jenish limbasiya")
+</script>

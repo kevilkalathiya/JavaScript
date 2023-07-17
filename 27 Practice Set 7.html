@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        display: flex;
+        background: pink;
+      }
+
+      li {
+        list-style: none;
+        margin: 0 23px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <li>Home</li>
+      <li>About</li>
+      <li>Blog</li>
+      <li>Contact</li>
+    </nav>
+  </body>
+</html>
+<script>
+  // 1). create a navbar and change the color of its first Element to red.
+
+  // let red = document.body.firstElementChild.firstElementChild;
+  // red.style.color = "red";
+
+  // document.getElementsByTagName("nav")[0].firstElementChild.style.color = "red";
+
+  // document.getElementsByTagName("li")[0].style.color = "red";
+
+  //   2). Create an element with 3 children. Now change the color of first and last element to green.
+
+  // document.getElementsByTagName("nav")[0].firstElementChild.style.color =
+  //   "green";
+  // document.getElementsByTagName("nav")[0].lastElementChild.style.color =
+  //   "green";
+
+  // 3). write a javascript code to change background of all <li> tags to cyan.
+
+  Array.from(document.getElementsByTagName("li")).forEach((Element) => {
+    console.log(Element);
+    Element.style.background = "cyan";
+  });
+</script>

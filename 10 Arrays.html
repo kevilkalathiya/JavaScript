@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // ============arrays introduction===========
+
+  // arrays : arays are variable which can hold more than one value.
+    // let marks_12 = [91, 25, 63, false, "not presant"];
+    // marks_12[5] = 89; //adding a new value to the array
+    // marks_12[0] = 99; //value can be change //note : "number" now become [99, 25, 63, false, "not presant", 89]
+    // //   arrays are mutable arrays can be changed.
+    // console.log(marks_12);
+    // console.log(marks_12[1]); //25
+    // console.log(marks_12[2]); //value get using index //63
+    // console.log(marks_12.length); // 6
+
+  //   =========arrays methods==========
+
+  let num = [1, 2, 5, 7, 52];
+  // console.log(typeof num); //object
+
+  //   1) toString method : The toString() method returns a string representing the object. 
+  //   let b = num.toString(); //b is now a string
+  //   console.log(b); //1,2,5,7,52
+  //   console.log(typeof b); //string
+
+  //   2) join method : join all the array elements using a seprator.
+  //   let c = num.join("-");
+  //   console.log(c, typeof c); //1-2-5-7-52, string
+
+  //   3) pop method : remove last element from the arays.
+  //   note : this method update the orignal array return the popped value.
+  //   let r = num.pop(); //pop return the popped element
+  //   console.log(num, r); // [1, 2, 5, 7] , 52
+
+  //   4) push method :adds a new element at the end of the array.
+  //   note: modified the original array and return the new array length.
+  //   let j = num.push(56); //push return the new array length
+  //   console.log(num, j); //[1, 2, 5, 7, 52, 56] ,length 6
+
+  //   5) shift method : remove first elements and return it.
+  //   note : original array modified
+  //   let k = num.shift();
+  //   console.log(num, k); //[2, 5, 7, 52] , 1
+
+  //   6) unshift method : adds elements to the start of the array and return the new array length.
+  //   note : original array modified
+  //   let l = num.unshift(99);
+  //   console.log(num, l); //[99, 1, 2, 5, 7, 52], 6
+
+  //   7) delete : array elements can be deleted using the delete operator
+  //   note : delete is an operator , original array modified
+  //   console.log(num.length); //5
+  //   delete num[0];
+  //   console.log(num); //[empty, 2, 5, 7, 52] // delete operator it doesn't affect array length
+  //   console.log(num.length); //5
+
+  //   8) concate : used to join array to the given array.
+  //   note :return a new array does note change existing array
+  //   let num_more = [221, 222, 225, 27, 52, 11, 25];
+  //   let num_even_more = [3221, 3222, 3225, 327];
+  //   let newarray = num.concat(num_more);
+  //   console.log(newarray); //[1, 2, 5, 7, 52, 221, 222, 225, 27, 52, 11, 25]
+  //   let newarray1 = num.concat(num_more, num_even_more);
+  //   console.log(newarray1); //[1, 2, 5, 7, 52, 221, 222, 225, 27, 52, 11, 25, 3221, 3222, 3225, 327]
+  //   console.log(num, num_more); //[1, 2, 5, 7, 52] , [221, 222, 225, 27, 52, 11, 25]
+
+  //   9) sort method: sort() method is used to sort an array alphabetically.
+  //   note : original array modified
+    let num2 = [11, 222, 35, 337, 452, 8, 10, 99];
+  //   num2.sort();
+  //   console.log(num2); //[10, 11, 222, 337, 35, 452, 8, 99]
+
+  //   compare function : When the sort() function compares two values, it sends the values to the compare function,
+  //   and sorts the values according to the returned (negative, zero, positive) value.
+  //   If the result is negative, a is sorted before b.
+  //   If the result is positive, b is sorted before a.
+  //   If the result is 0, no changes are done with the sort order of the two values.
+
+    // let compare = (a, b) => {
+    //   console.log(a + "-" + b + " : "  ,a-b);
+    //   return a - b;
+    // };
+
+    // num2.sort(compare);
+    // console.log(num2); //[8, 10, 11, 35, 99, 222, 337, 452]
+
+  //   10) revers : reverses the element in the source array.
+  //   num2.reverse();
+  //   console.log(num2); //[99, 10, 8, 452, 337, 35, 222, 11]
+
+  //   11) splice : splice can be used to add new items to an array.
+  //   note: return deleted items and modifies the array.
+  let num3 = [551, 22, 3, 14, 5, 6, 7, 8, 229];
+  //   let deletedvalues = num3.splice(2, 3, 2021, 2022, 2023, 2024, 2025);
+  //   // first is position to add // second is no. of elements to remove // and after elements to be added.
+  //   console.log(num3); //[551, 22, 2021, 2022, 2023, 2024, 2025, 6, 7, 8, 229]
+  //   console.log(deletedvalues, typeof deletedvalues); //[3, 14, 5], 'object'// this is deleted value.
+
+  //   12) slice:slices out a piece from an array it creates a new array.
+  //   let newnum = num3.slice(3);
+  //   console.log(newnum); //[14, 5, 6, 7, 8, 229]
+  //   let newnum = num3.slice(3, 5);
+  //   console.log(newnum); //[14, 5]
+  //   console.log(num3);
+</script>

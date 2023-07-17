@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .lightblue {
+        background-color: lightblue;
+        color: black;
+      }
+      .gray {
+        background-color: gray;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="first" class="lightblue">
+      <span>hey i am first</span>
+    </div>
+  </body>
+</html>
+<script>
+  // ----------  ClassName and classlist -----------
+
+  //   If we assign something to element.className, it replaces the whole string of Classes.
+
+  // Often we want to add/remove / toggle a single class.
+
+  let first = document.getElementById("first");
+  //    first.className = "gray";
+
+  // 1) element.classlist.add/remove ("class") - Adds/removes a class
+  //    first.classList.remove("lightblue");
+  //    first.classList.add("gray");
+
+  // 2) element.classlist.toggle ("class") Adds the class if it doesn't exist otherwise removes it.
+  //    first.classList.toggle("gray");
+
+  // 3) element.classlist.contains ("class") - Checks for the given class, returns true / false
+  //    console.log(first.classList.contains("gray"));
+  //    console.log(first.classList.contains("lightblue"));
+</script>

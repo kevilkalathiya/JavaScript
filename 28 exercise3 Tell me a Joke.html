@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h3>What falls, but never needs a bandage? The rain.</h3>
+      <button onclick="changeJoKe()" class="btn btn-primary">
+        change JOKE
+      </button>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+<script>
+  // ----- Exercise 3- Tell me a Joke -----
+
+  // Element.innerHTML is used to populate a div with HTML. Search online about this method
+  // and create a website with a div tag containing A random joke given an array of joke
+  // Use Math.random and fetch jokes from the internet (use any website to create the array)
+  // Your website should show a random Joke on every reload. Min length of your Jokes Array
+  // should be 10.
+
+  let joke = [
+    "What falls, but never needs a bandage? The rain.",
+    "I was going to tell you a joke about boxing but I forgot the punch line.",
+    " I'm not a fan of spring cleaning. Let's be honest, I'm not into summer, fall, or winter cleaning either.",
+    " Why did the egg hide? It was a little chicken.",
+    " What did the dirt say to the rain? If you keep this up, my name will be mud!",
+    " Why couldn't the sunflower ride its bike? It lost its petals.",
+    " What's an egg's favorite vacation spot? New Yolk City.",
+    " I ate a sock yesterday. It was very time-consuming.",
+    " What kind of candy do astronauts like? Mars bars.",
+    "  I wanted to buy some camo pants but couldn't find any.",
+    " I ordered a chicken and an egg from Amazon. I'll let you know.",
+    " What month is the shortest of the year? May, it only has three letters.",
+    " What did the snail who was riding on the turtle's back say? Wheeeee!",
+    " I was going to tell a time traveling joke, but you guys didn't like it.",
+    " What do you call a lazy kangaroo? A pouch potato.",
+    " I used to run a dating service for chickens, but I was struggling to make hens meet.",
+    " Why do we tell actors to 'break a leg?'' Because every play has a cast.",
+    " What does a pig put on dry skin? Oinkment.",
+    " What do you call it when a snowman throws a tantrum? A meltdown.",
+    " My uncle named his dogs Timex and Rolex. They're his watch dogs.",
+    " Did you hear about the guy whose left side was cut off? He's all right now.",
+    " How do you open a banana? With a mon-key.",
+  ];
+
+  let changeJoKe = () => {
+    let random = Math.floor(Math.random() * joke.length);
+    console.log(random);
+    document.body.firstElementChild.firstElementChild.innerHTML = joke[random];
+  };
+</script>

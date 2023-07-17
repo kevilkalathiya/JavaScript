@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //  ==== Classes and Objects ====
+
+  // In object oriented programming, a class is an extensible program-code template for creating objects, providing initial values
+  // for state (member variables) and implementation of behavior (member functions)
+
+  // The basic syntax for writing a class is :
+
+  // class myclass {
+  //   constructor() {
+  //     // .....
+  //   }
+  //   method1() {
+  //     // ......
+  //   }
+  //   method2() {
+  //     // ......
+  //   }
+  // }
+
+  // we can then use new myclass() to create a new object with all the listed methods.
+
+  class RailwayForm {
+    submit() {
+      alert(
+        this.name + ": Your form is submitted for train number: " + this.trainNo
+      );
+    }
+    cancel() {
+      alert(
+        this.name + ": This form is cancelled for train number: " + this.trainNo
+      );
+    }
+    fill(givenname, trainNo) {
+      this.name = givenname;
+      this.trainNo = trainNo;
+    }
+  }
+
+  // create a form for harry
+  let harryForm = new RailwayForm();
+  // Fill the form with harry's details
+  harryForm.fill("Harry", 12345);
+
+  // create a form for rohan
+  let rohanForm1 = new RailwayForm();
+  let rohanForm2 = new RailwayForm();
+  // Fill the form with rohan's details
+  rohanForm1.fill("rohan", 67890);
+  rohanForm2.fill("rohan", 54321);
+
+  harryForm.submit();
+  rohanForm1.submit();
+  rohanForm2.submit();
+  rohanForm1.cancel();
+</script>

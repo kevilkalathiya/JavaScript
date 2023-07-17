@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span id="first"> hey, i am span </span>
+    <div id="second" hidden>div tag</div>
+  </body>
+</html>
+<script>
+  //  ====== Events & other DOM properties ======
+
+  //  ---- Console.dir function ----
+
+  //  Console.log shows the element DOM tree.
+  let log = document.getElementsByTagName("span")[0];
+  console.log(log);
+
+  //  Console.dir shows the element as an object with its properties.
+  let dir = document.getElementsByTagName("span")[0];
+  console.dir(dir);
+
+  //  ---- tagName/node Name ----
+
+  //  used to read tag name of an element.
+
+  //  TagName → only exist for Element nodes.
+  // console.log("tagname : " + document.body.firstChild.tagName); // undefined
+  // console.log("tagname : " + document.body.firstElementChild.tagName); // SPAN
+
+  //  nodeName → defined for any node (text, comment etc.)
+  // console.log("nodeName : " + document.body.firstChild.nodeName); // #text
+  // console.log("nodeName : " + document.body.firstElementChild.nodeName); // SPAN
+
+  //  ---- innerHTML and outerHTML ----
+  let first = document.getElementById("first");
+
+  //  The innerHTML property allows to get the HTML inside the element as a string.
+  //  (Valid for element nodes only)
+  // console.log(first.innerHTML);
+  // first.innerHTML = "<i>Hey i am italic</i>";
+
+  //  The outerHTML property contains the full HTML. innerHTML + the element itself.
+  // console.log(first.outerHTML);
+  // first.outerHTML = "<div>Hey</div>";
+
+  //  innerHTML is valid only for element nodes. For other node types we Can use nodeValue or data.
+  console.log(document.body.firstChild.data);
+  console.log(document.body.firstChild.nodeValue);
+
+  //  ---- text Content ----
+
+  //  Provides access to the text inside the element: only text, minus all tags.
+  //  console.log(document.body.textContent);
+
+  //  ---- The hidden property ----
+
+  //  The "hidden" attribute and the DOM property specifies whether the element is visible or not.
+
+  //  let second = document.getElementById("second");
+  //  second.hidden = false;
+</script>

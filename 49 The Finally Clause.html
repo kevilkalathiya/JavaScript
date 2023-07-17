@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // ==== The finally clause ====
+
+  // The try... Catch Construct may have one more code Clause: finally
+
+  // If it exists it runs in all cases:
+
+  // after try if there were no errors after catch if there were errors.
+
+  // If there is a return in try, finally is executed just before the control returns to the outer code.
+
+  let f = () => {
+    try {
+      let a = 0;
+      //   console.log(program);
+      console.log("Program run successfully");
+      return;
+    } catch (err) {
+      console.log("This is an error");
+      console.log(p);
+    } finally {
+      console.log("I am a good boy");
+    }
+  };
+  f();
+  console.log("End");
+</script>

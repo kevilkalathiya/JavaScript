@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let num = [3, 56, 42, 85, 45];
+
+  //  for (let i = 0; i < num.length; i++) {
+  //  // console.log(num[i]); //3, 56, 42, 85, 45
+  //  }
+  //  ===== foreach loop =======
+  //  foreach : calls a function, once for each array elements.
+  //  syntax : const a = [1,2,3]
+  //  a.forEach((value,index,array)=>{
+  //      code....
+  //  })
+
+  //  num.forEach((value,index,array) => {
+  //    console.log(elements * elements); //9 3139 1764 7225 2025
+  //    // console.log("value is : "+ value + " index is : "+ index +" array is : "+ array);
+  //  });
+
+  //  ======== array from =========
+  //  array from : used to create an array from any other object
+  //  let name = "jenish";
+  //  let arr = Array.from(name);
+  //  console.log(arr); // ['j', 'e', 'n', 'i', 's', 'h']
+
+  //   ========= for of =======
+  //   for of : for of loop can be use to get the value from an array .
+  //   for (let i of num) {
+  //     console.log(i); //3, 56, 42, 85, 45
+  //   }
+
+  //   =========for in =======
+  //   for in : for in loop can be used to get the key from an array.
+  //   for (let items in num) {
+  //     console.log(items); //0, 1, 2, 3, 4
+  //   }
+
+  // map,filter,reduce : higher order array methods
+
+  // ======== map method ========
+  // map() : create a new array by performing some operation on each array elements.
+  // note : we use map when we have to create a new array.and forech when we have to do any operation on the
+  //        existance Element of an Array.
+
+  //   let a = num.map((value, index, array) => {
+  //     console.log(value, index, array);
+  //     // 3 0 (5) [3, 56, 42, 85, 45]
+  //     // 56 1 (5) [3, 56, 42, 85, 45]
+  //     // 42 2 (5) [3, 56, 42, 85, 45]
+  //     // 85 3 (5) [3, 56, 42, 85, 45]
+  //     // 45 4 (5) [3, 56, 42, 85, 45]
+  //     return value + 1;
+  //   });
+  //   console.log(a); //[4, 57, 43, 86, 46]
+
+  // ============= filter method ===========
+  //   filter() : filter an array with values that passes a test create a new array
+  // let a2 = num.filter((a) => {
+  //   console.log(a); // 3, 56, 42, 85, 45;
+  //   return a < 50;
+  // });
+  // console.log(a2); //[3, 42, 45]
+
+  // =============reduce method===========
+  //   reduce method : reduce an array to a single value.
+  // let array = [1, 2, 3, 5, 4, 2];
+  // let newarray = array.reduce((total, value) => {
+  //   console.log(total, value);
+  //   return total + value;
+  // });
+  // console.log(newarray); //17
+</script>

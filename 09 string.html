@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // string: string are used to store and manipulate text
+  //   let name = "jenish";
+  //   console.log(name.length); //6
+  //   console.log(name[0]); //j
+
+  //   template litrals : Template literals provide an easy way to interpolate variables and expressions into strings.
+  //   The method is called string interpolation.
+  //   backtick (`)
+
+  let boy1 = "jenish";
+  let boy2 = "kevil";
+  //   kevil is a friend of jenish
+  // let sentence = `${boy2} is a friend of ${boy1}`;
+  // console.log(sentence);
+
+  //   Escape sequance characters :In JavaScript, you can escape a string by using the \ (backslash) character.
+  //   The backslash indicates that the next character should be treated as a literal character rather than as
+  //   a special character or string delimiter
+
+  // let fruit = "bana'na"; // "bana\'na"
+  // console.log(fruit); //bana'na
+  // console.log(fruit.length); //7
+  // let fruits = 'bana"na';
+  // console.log(fruits); //bana"na
+
+  // ========string methods========
+
+  let names = "jenish";
+  // console.log(names.toUpperCase()); //JENISH
+  // console.log(names.toLowerCase()); //jenish
+  // console.log(names.slice(2, 4)); //ni ==> (from 2 to 4, 4 is not includ)
+  // console.log(names.slice(2)); //nish ==>from 2 to end
+  // console.log(names.replace("jen", "kev")); //kevish
+
+  let dost = "kevil";
+  // console.log(dost.concat(" is a friend of ", names, " ok")); //kevil is a friend of jenish ok
+  // let dost2 = "         gaurang      ";
+  // console.log(dost2); //space included
+  // console.log(dost2.trim()); //space removed
+
+  //   ========practice========
+  // const senten = "the quick brown fox jumps over he lazy dog";
+  // const word = "fox jumps";
+  // console.log(
+  //   `the word ${senten.includes(word) ? "is" : "is not"} in the sentence` //the word is in the sentence
+  // );
+
+  //   startsWith : The startsWith() method returns true if a string starts with a specified string.
+  //   Otherwise it returns false.
+  //   The startsWith() method is case sensitive.
+
+    // let text = "Hello world, welcome to the universe.";
+    // console.log(text.startsWith("Hello")); //true
+
+    // let text = "Hello world, welcome to the universe.";
+    // console.log(text.startsWith("world", 6)); //true
+
+  // let str = "please give rs 1000";
+  // amount = Number.parseInt(str.slice(16));
+  // console.log(amount);
+  // console.log(typeof amount);
+</script>

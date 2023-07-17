@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button id="btn">Click Me</button>
+    </div>
+  </body>
+</html>
+<script>
+  /* ------ addEventListener and removeEventListener ------
+
+    addEventListener is used to assign multiple handlers to an event.
+
+    element.addEventListener(event, handler)
+
+    element.removeEventListener (event, handler)
+                    ↓
+    handler must be the same function object for this to work
+
+    ---- The Event Object ----
+
+    When an event happens, the browser creates an event object, puts details into it and passes it as an argument to the handler.
+
+    element.onclick= function(event) { ... }
+
+    event.type: Event type
+    event.currentTarget: Element that handled the event
+    event.clientX / event.clientY : Coordinates of the cursor */
+
+  let btn = document.getElementById("btn");
+
+  // let x = function (e) {
+  //   alert("Hello world 1");
+  // };
+
+  // let y = function (e) {
+  //   alert("Hello world 2");
+  // };
+
+  // btn.addEventListener("click", x);
+  // btn.addEventListener("click", y);
+
+  // let a = prompt("what is your favorite number?");
+  // a = Number.parseInt(a);
+
+  // if (a == 2) {
+  //   console.log("function called");
+  //   btn.removeEventListener("click", x);
+  // }
+
+  // let z = function (e) {
+  //   console.log(e);
+  //   console.log(e.target);
+  //   console.log(e.type);
+  //   console.log(e.currentTarget);
+  //   console.log("clientX : " + e.clientX);
+  //   console.log("clientY : " + e.clientY);
+  // };
+  // btn.addEventListener("click", z);
+</script>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //   1)  create a javascript class to create a complex Number. create a constructor to set the real and the complex part.
+  //   2)  write a method to add two complex numbers in the above class.
+  //   5)  use getters & setters to set and get the real and imaginary parts of the complex Number.
+
+  class complex {
+    constructor(real, imaginary) {
+      this.real = real;
+      this.imaginary = imaginary;
+      console.log("Con " + this.real);
+      console.log("Con " + this.imaginary);
+    }
+
+    add(num) {
+      console.log(num);
+      console.log("this.real " + this.real);
+      console.log("this.imaginary " + this.imaginary);
+      console.log("num.real " + num.real);
+      console.log("num.imaginary " + num.imaginary);
+
+      this.real = this.real + num.real;
+      this.imaginary = this.imaginary + num.imaginary;
+    }
+
+    get _real() {
+      console.log("get real");
+      return this.real;
+    }
+
+    get _imaginary() {
+      console.log("get imaginary");
+      return this.imaginary;
+    }
+
+    set _real(newReal) {
+      console.log("set real");
+      this.real = newReal;
+    }
+
+    set _imaginary(newimaginary) {
+      console.log("set imaginary");
+      this.imaginary = newimaginary;
+    }
+  }
+
+  let a = new complex(3, 4);
+  console.log("a " + a.real);
+  console.log("a " + a.imaginary);
+
+  a._real = 10;
+  a._imaginary = 10;
+
+  let b = new complex(6, 2);
+  console.log("b " + b.real);
+  console.log("b " + b.imaginary);
+
+  // a.add(b);
+  b.add(a);
+  console.log(`${b.real} + ${b.imaginary}`);
+
+  // 3. create a class student from a class human. override a method & see changes.
+  // 4. see if student is an instance of human using instanceof keyword.
+
+  // class Human {
+  //   constructor(name, favfood) {
+  //     this.name = name;
+  //     this.favfood = favfood;
+  //   }
+  //   walk() {
+  //     console.log(this.name + " Human is walking");
+  //   }
+  // }
+
+  // class Student extends Human {
+  //   walk() {
+  //     console.log(this.name + ": Student is walking");
+  //   }
+  // }
+
+  // let o = new Student("harry", "Bhindi");
+  // o.walk();
+
+  // console.log(o instanceof Human);
+</script>

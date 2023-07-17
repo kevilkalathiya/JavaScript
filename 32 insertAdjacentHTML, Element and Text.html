@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="first">Hey i am first</div>
+  </body>
+</html>
+<script>
+  // insert Adjacent HTML / Text / Element
+
+  // This method is used to insert HTML. The first parameter is a code word,specifying where to insert.
+  // and The second parameter is an HTML string. Must be one of the following:
+
+  let first = document.getElementById("first");
+
+  // 1). "beforebegin" - Insert HTML immediately before element.
+  first.insertAdjacentHTML(
+    "beforebegin",
+    '<div class="test">beforebegin</div>'
+  );
+
+  // 2). "afterbegin" - Insert HTML into element at the beginning.
+  first.insertAdjacentHTML("afterbegin", '<div class="test">afterbegin</div>');
+
+  // 3). "beforeend" - Insert HTML into element at the end.
+  first.insertAdjacentHTML("beforeend", '<div class="test">beforeend</div>');
+
+  // 4). " afterend" - Insert HTML immediately after element.
+  first.insertAdjacentHTML("afterend", '<div class="test">afterend</div>');
+
+  // ------- Node removal -------
+  // to remove a node,there's a method node.remove()
+  // first.remove();
+</script>

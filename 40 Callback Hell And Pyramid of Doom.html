@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // ---- Callback Hell & Pyramid of Doom -----
+
+  // When we have callback inside callbacks, the code gets difficult to manage.
+
+  /* loadScript (( ...) {
+        loadScript ...
+
+            loadScript...
+                                           ← Pyramid of Doom
+                loadScript...
+     })  */
+
+  // As calls become more nested, the code becomes deeper and increasingly more difficult to manage,
+  // especially if we have real code instead of ...
+
+  // This is Sometimes called " Callback hell" or "pyramid of doom".
+
+  // The "pyramid" of these calls grows towards the right with every asynchronous action.
+  // Soon it, Spirals out of control.So this way of coding isn't very good!
+
+  /*  loadscript(
+    "https://cdn.jsdelivrkk.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js",
+    function hello(error, src) {
+      if (error) {
+        console.log(error);
+        return;
+      }
+      "https://cdn.jsdelivrkk.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js",
+        function hello(error, src) {
+          if (error) {
+            console.log(error);
+            return;
+          }
+          "https://cdn.jsdelivrkk.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js",
+            function hello(error, src) {
+              if (error) {
+                console.log(error);
+                return;
+              }
+            };
+        };
+    }
+  );  */
+</script>

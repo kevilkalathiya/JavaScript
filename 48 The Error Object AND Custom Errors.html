@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // ======= The error object =======
+
+  // For all the built in errors, the error object has two main propertes:
+  // try {
+  //   hey;
+  // } catch (err) {
+  //   console.log(err.name);
+  //   console.log(err.message);
+  //   console.log(err.stack);
+  // }
+
+  // === Throwing Custom Enor ===
+
+  // We can throw our own error by using the throw syntax
+
+  // try {
+  //   throw new ReferenceError("kevil is not good");
+  // } catch (err) {
+  //   console.log(err.name);
+  //   console.log(err.message);
+  //   console.log(err.stack);
+  // }
+
+  try {
+    let age = prompt("Enter your age");
+    age = Number.parseInt(age);
+    if (age > 150) {
+      throw new ReferenceError("Invalid Age");
+    }
+  } catch (err) {
+    console.log(err.name);
+    console.log(err.message);
+    console.log(err.stack);
+  }
+
+  console.log("The script is still running");
+
+  //  We can also throw a particular error by using the built in Constructor for standard errors:
+  //  let error = new SyntaxError(message)
+  //                       or
+  //              new ReferenceError(message)
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // === JavaScript Cookies ===
+  // Cookies are small strings of data stored directly in the browser.
+  // In JavaScript, document.cookie provides access to Cookies.
+
+  // Cookies are set by a web server using the Set-Cookie HTTP-header. Next time when the request is
+  // sent to the same domain, the browser sends the cookie using the Cookie HTTP - header. That way the
+  // Server knows who sent the request
+
+  // We can also access cookies using document.Cookie property :
+  // alert(document.cookie)
+  //               ↳ Contains key = value pairs delimited by a ;
+
+  // === Writing to Cookie ===
+  // An assignment to document.cookie is treated specially In a way that a write operation doesn't
+  // touch other Cookies
+
+  // document.cookie = " user = Harry"
+  //                          ↳  updates only cookie named user to Harry
+
+  // === encodeURIComponent ===
+
+  // This function helps keep the valid formatting. It is used like this:
+
+  // document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value)
+
+  // This way, the special characters are encoded
+
+  // === Cookie options ===
+  // Cookies have several options which can be provided after key = value to a set call like this :
+
+  // document.cookie = "user = John; path = /a; expires = Tue, 29 March 2041 03:18:22 GMT"
+
+  // path option makes the Cookie visible at /a, /a/b etc. expires sets the cookie expiration time
+
+  // === Note: ===
+  // 1. The name = value pair, after encodeURIComponent,should not exceed 4KB
+  // 2. Total no of Cookies per domain is limited to around 20+ (Exact number is browser dependent)
+
+  console.log(document.cookie);
+  document.cookie = "name=jenish";
+  document.cookie = "name=jenish limbasiya";
+  let key = prompt("enter your key");
+  let value = prompt("enter your value");
+  document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
+  console.log(decodeURIComponent("a%3B%3B"));
+  console.log(document.cookie);
+
+  //   document.cookie = "iteam=milk; expires=Mon, 12 jun 2023 03:18:22 GMT";
+  //   document.cookie = "iteam=keser;expires=Mon, 12 jun 2041 03:18:22 GMT";
+  //   document.cookie = "iteam=keser;expires=Sat, 10 jun 2023 03:18:22 GMT";
+</script>

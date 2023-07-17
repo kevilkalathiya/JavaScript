@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // ==== Chapter 12 - Advanced JavaScript ====
+
+  // There are some JavaScript concepts which make the life of a developer extremely simple.
+  // We will discuss some of those this in Chapter.
+
+  // ==== IIFE ====
+  // IIFE is a JavaScript function that runs as Soon as it defined.
+
+  // (function () {
+  //   ...    → IIFE Syntax
+  //   ...
+  // })();
+
+  // It is used to avoid polluting the global namespace, execute an async-await, etc.
+
+  let a = () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(456);
+      }, 4000);
+    });
+  };
+
+  (async () => {
+    let b = await a();
+    console.log(b);
+    let c = await a();
+    console.log(c);
+    let d = await a();
+    console.log(d);
+  })();
+</script>

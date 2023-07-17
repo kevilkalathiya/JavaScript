@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About Me</li>
+        <li>Hire me</li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <p>Hey i am a good boy</p>
+    </div>
+  </body>
+</html>
+<script>
+  let a = document.body;
+  console.log("First child is : ", a.firstChild); // text
+  console.log("First Element child is :", a.firstElementChild); //nav
+
+  //   ===== element only navigation ======
+  // sometime we dont want text or comment nodes. some links only take element nodes into account.
+  // for example :
+  // document.previousElementSibling //previous sibling which is an elements
+  // document.nextElementSibling //next sibling which is an elements
+  // document.firstElementChild//first Element Child
+  // document.lastElementChild //last Element Child
+
+  console.log(
+    "document.body.previousElementSibling is : ",
+    document.body.previousElementSibling
+  );
+
+  console.log(
+    "document.body.nextElementSibling is : ",
+    document.body.nextElementSibling
+  );
+
+  const changebgred = () => {
+    document.body.firstElementChild.style.background = "lightblue";
+  };
+
+  changebgred();
+
+  console.log(a.firstElementChild.firstElementChild.children); //[li, li, li]
+</script>

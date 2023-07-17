@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let marks = {
+    jenish: 80,
+    kevil: 95,
+    bhagyesh: 50,
+  };
+
+  // The Object.keys() static method returns an array of a given object's own enumerable string-keyed property names.
+  console.log(Object.keys(marks)); // return object keys convert object to array
+  for (let i = 0; i < Object.keys(marks).length; i++) {
+    console.log(
+      "the marks of " +
+        Object.keys(marks)[i] +
+        " are " +
+        marks[Object.keys(marks)[i]]
+    );
+  }
+
+  for (let key in marks) {
+    console.log("the marks of " + key + " are " + marks[key]);
+  }
+
+  let cn = 43;
+  let i;
+  console.log("i : "+ i);
+  while (i != cn) {
+    i = prompt("Enter a number");
+    i = Number.parseInt(i);
+  }
+  console.log("you have enter a correct number");
+
+  let a = null;
+  console.log(a);
+</script>

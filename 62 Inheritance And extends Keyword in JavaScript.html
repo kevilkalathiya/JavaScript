@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //  ====== Class Inheritance ======
+
+  // Class Inheritance is a way for one class to extend another class. This is done by using the extends keyword.
+
+  // ===== The extends keyword =====
+
+  // extends keyword is used to extend another class.
+
+  // class Child extends Parent
+
+  // We can create a class Monkey that inherts from Animal.
+
+  class Animal {
+    constructor(name, color) {
+      this.name = name;
+      this.color = color;
+      console.log(this.name);
+    }
+    run() {
+      console.log(this.name + " is running!");
+    }
+    shout() {
+      console.log(this.name + " is barking!");
+    }
+  }
+
+  class Monkey extends Animal {
+    eatBanana() {
+      console.log(this.name + " is eating banana");
+    }
+    hide() {
+      console.log(`${this.name} is hiding`);
+    }
+  }
+
+  let ani = new Animal("Bruno", "white");
+  let mon = new Monkey("chimpu", "orange");
+
+  ani.shout();
+  mon.eatBanana();
+  mon.hide();
+  mon.run();
+  mon.shout();
+  // ani.hide(); this will throw an error
+</script>

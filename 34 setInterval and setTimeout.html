@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // ----- SetTimeout and setInterval -----
+
+  /*  SetTimeout allows us to run a function once after the interval of time.
+
+      Syntax of setTimeout is as follows :
+
+      let timerId = SetTimeout( function, <delay> <arg 1>, <arg 2>)
+             ↓                               ↓
+      returns a timerID                    in ms
+
+      clearTimeout is used to cancel the execution (incase we change our mind).
+      For example :
+
+      let timerId = SetTimeout (() => alert("never"), 1000);
+      clearTimeout(timerId)
+                      ↓
+              cancel the execution   */
+
+  //   let a = setTimeout(function () {
+  //     alert("i am inside of settimeout");
+  //   }, 5000);
+
+  //   let b = confirm("Do you want to run the setTimeout");
+  //   console.log(b);
+
+  //   if (false === b) {
+  //     clearTimeout(a);
+  //   }
+  //   console.log(a);
+
+  //   let sum = (a, b, c) => {
+  //     console.log("yes i am running " + (a + b + c));
+  //   };
+  //   setTimeout(sum, 2000, 2, 3, 7);
+
+  /*  set Interval method has a similar syntax as Set Timeout :
+
+      let timerId = setInterval (function, <delay>, <arg 1>, <arg 2>)
+
+      All arguments have the same meaning. But unlike setTimeout, it runs the function not only once,
+      but regularly after the given interval of time.
+
+      To stop further calls, we can use clearInterval(timerId) */
+
+  //   let c = setInterval(function () {
+  //     alert("setInterval");
+  //   }, 3000);
+  //   clearInterval(c);
+
+  //   let sum = (a, b, c) => {
+  //     console.log("yes i am running " + a * b * c);
+  //   };
+  //   setInterval(sum, 3000, 1, 3, 1);
+</script>
